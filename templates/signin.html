@@ -11,6 +11,14 @@
 </head>
 
 <body>
+  {% for message in messages %}
+
+  <div class="alert alert-success">
+    <a class="close" href="/" data-dismiss="alert">×</a>
+    {{ message }}
+  </div>
+
+  {% endfor %}
 
   <div class="container-fluid text-white d-flex justify-content-center ">
     <div class="row">
