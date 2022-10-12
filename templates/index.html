@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container text-center pt-2">
+        <h2>Welcome To My personal Website</h2>
+
+        <div class="row row-cols-1 row-cols-md-4 g-3 d-flex align-items-stretch my-2">
+            {% for inp in my_dict %}
+                <div class="card-group h-100 ">
+                    <div class="card">
+                    <img src="{{inp.image}}" class="card-img-top" alt="..." style="width: 100%;height: 25vw;object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{inp.name}}</h5>
+                        <p class="card-text">{{inp.details}}</p>
+                    </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock  %}
+      
